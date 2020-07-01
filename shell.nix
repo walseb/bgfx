@@ -1,11 +1,9 @@
 { nixpkgs ? import <nixpkgs> {}, compiler ? "default" }:
 
 let
-
   inherit (nixpkgs) pkgs;
-
   f = { mkDerivation, base, bytestring, clock, distributive
-      , lens, linear, mesa, sdl2, stdenv, x11
+      , lens, linear, mesa, sdl2, stdenv, x11, libGL
       }:
       mkDerivation {
         pname = "bgfx";
@@ -14,7 +12,7 @@ let
         isLibrary = true;
         isExecutable = true;
         libraryHaskellDepends = [ base ];
-        libraryPkgconfigDepends = [ mesa x11 ];
+        libraryPkgconfigDepends = [ mesa x11 libGL ];
         executableHaskellDepends = [
           base bytestring clock distributive lens linear sdl2
         ];
