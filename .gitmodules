@@ -1,6 +1,6 @@
 [submodule "bgfx-upstream"]
 	path = bgfx-upstream
-	url = git@github.com:bkaradzic/bgfx.git
+	url = https://github.com/bkaradzic/bgfx
 [submodule "bx-upstream"]
 	path = bx-upstream
-	url = git@github.com:bkaradzic/bx.git
+	url = https://github.com/bkaradzic/bx
